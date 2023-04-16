@@ -1,0 +1,110 @@
+.fullcontainer{
+
+align-items: center;
+text-align: center;
+padding:50px;
+padding-left: 70px;
+margin-left: 10%;
+height: 100%;
+
+}
+
+.logincontainer{
+    background-color: pink;
+    text-align: left;
+    padding: 10px 30px;
+   
+    width: 35%;
+    margin: 0 25%;
+    font-family: Times New Roman;
+}
+
+.logincontainer label{
+  margin-bottom: 10px;
+}
+
+.logincontainer input{
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    
+
+}
+
+.logincontainer button{
+    width: 100%;
+    color: white;
+    background-color: rgb(23, 23, 242);
+    height:30px ;
+   
+}
+
+.check{
+  position: relative;
+    align-items: center;
+   font-size: 15px;
+   display: flex;
+   
+}
+
+.check label
+ {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+
+
+
+.forgot-password {
+  position: absolute; /* set the position of the p element as absolute */
+
+  right: 0; /* set the right position to align with the right corner of the parent div */
+  text-align: right; /* align the text to the right */
+  color: green;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.check input{
+   width: 5%;
+   margin-top: 10px;
+}
+
+.or-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 10px;
+  }
+  
+  .text {
+    font-size: 12px;
+    
+  }
+
+  .gitButton button{
+    height: 45px;
+   background-color: rgba(0, 0, 0, 0.772);
+   color: white;
+   width: 97%;
+   margin-left: 6px;
+   border-radius: 3px;
+   font-size: 20px;
+   text-align: left;
+   display: flex; 
+  align-items: center; 
+
+  }
+
+
+  /* ========================================================= */
+  
+
+  

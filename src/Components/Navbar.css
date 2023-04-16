@@ -1,0 +1,23 @@
+
+.profile-Admin{
+    display: flex;
+    align-items: center;
+   padding-left: 10px;
+   background-color: #eee6e6;
+   border-radius: 10px;
+   width: 80%;
+
+}
+
+.fullnav{
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    border: 3px black bold;
+}
+
+.cards img{
+    margin: 20px 30px;
+
+}
+
+

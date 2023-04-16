@@ -1,0 +1,83 @@
+.fullDashbord{
+    display: flex;
+    padding: 0 15px;
+}
+
+.navirightcontnt button{
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: rgb(72, 71, 71);
+}
+
+.navirightcontnt  img{
+   margin: 0 10px;
+}
+.cards img {
+    margin: 0 20px;
+
+}
+
+.sheet img {
+   margin: 0 3px; 
+   border: 1px solid rgb(242, 242, 242);
+}
+
+.piechart img {
+    margin: 0 10px;
+    border: 1px solid rgb(242, 242, 242);
+}
+
+.table-info {
+    width:97%;
+}
+
+.table-img {
+display: flex;
+margin-top: 25px;
+}
+
+.refer-img   {
+    padding-top: 80px;
+   
+
+}
+
+.refer-img img{
+    border: 4px solid rgb(180, 175, 175);
+}
+
+.view-button{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(120, 118, 118);
+    color: white;
+}
+
+/* ---------------Mobile view css---------------- */
+@media (max-width: 767px) { 
+    .vartical-nav{
+        display: none;
+    }
+
+    .fullDashbord{
+        width: 100%;
+        display: inline;
+    }
+
+    .cards img{
+        width: 90%;
+    }
+
+    .sheet img{
+        width: 100%;
+    }
+
+    .piechart img{
+        width: 100%;
+    }
+
+    .table-img .refer-img img {
+        width: 100%;
+    }
+
+}

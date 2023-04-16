@@ -4,7 +4,7 @@ import './Navbar.css';
 
 
 //------------------------- important images---------------------------
-
+import logo from './Images/logo.png'
 import app from './Images/app.png';
 import ecom from './Images/E-comm.jpeg';
 import analyst from './Images/analytics.png';
@@ -27,7 +27,7 @@ function NavBars() {
   return (
     <div className='fullnav'>
     <Nav className="flex-column">
-      <img width="40px" src='data:image/png;base64,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' ></img>
+     <img width={"50px"} src={logo}></img>
       <br/>
       <div className='profile-Admin' >
         <div>
@@ -57,14 +57,6 @@ function NavBars() {
       <Nav.Link><img width={30} src={chat}></img> Chat</Nav.Link>
       <Nav.Link><img width={30} src={cal}></img>  Calendar</Nav.Link>
       <Nav.Link><img width={30} src={kanban}></img>  Kanban</Nav.Link>
-
-
-
-
-    
-
-
-      
      
     </Nav>
     </div>

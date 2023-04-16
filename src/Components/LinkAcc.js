@@ -1,7 +1,4 @@
-import {
-  GoogleLoginButton,
-  FacebookLoginButton,
-} from "react-social-login-buttons";
+import {GoogleLoginButton,FacebookLoginButton} from "react-social-login-buttons";
 import { LoginSocialGoogle, LoginSocialFacebook } from "reactjs-social-login";
 
 function Google() {

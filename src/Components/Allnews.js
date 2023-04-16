@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Table from 'react-bootstrap/Table';
-import { useNavigate } from "react-router-dom";
 
-function News(){
-  const navigate = useNavigate();
+function Allnews(){
   const [data, setData] = useState([]);
   async function getData(){
     const result = await fetch(
@@ -14,7 +12,7 @@ function News(){
     const res= await result.json();
     console.warn(res);
     console.log( res.articles)
-    setData(res.articles.slice(0,3)); // Limiting to 5 rows
+    setData(res.articles);
   }
 
   useEffect(()=>{
@@ -50,7 +48,7 @@ function News(){
                   </td>
                   <td>{item.author}</td>
                   <td>{formatDate(item.publishedAt)}</td>
-                  <td>{item.title}</td>
+                  <td>{item.content}</td>
                 </tr>
               )) :
               <tr>
@@ -60,9 +58,8 @@ function News(){
           </tbody>
         </Table>
       </div>
-      <button className="view-button"  onClick={() => navigate('/allnews')}>View All Data</button>
     </div>
   )
 }
 
-export default News;
+export default Allnews;

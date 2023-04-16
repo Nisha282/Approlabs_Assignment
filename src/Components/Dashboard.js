@@ -1,60 +1,95 @@
 
-import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import NavBars from "./Navbar";
 
+import './Dashboard.css'
+
+import userlogo from './Images/users.jpeg'
+import npb from './Images/npb.png'
+import flag from './Images/language.png'
+import userimg from './Images/userimg.jpg'
 import income from './Images/income.jpg';
 import expenses from './Images/expenses.jpg';
 import master from './Images/masterCard.jpg';
 import chart from './Images/income_Chart.jpg';
 import quicktran from './Images/quickTran.jpg';
 import piechar from './Images/piechart.png';
+import contact from './Images/contact.jpg';
+import refer from './Images/refer&earn.jpg';
+
+import News from './News';
+
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { logout } from './Store';
+
+
+  
 
 function Dashboard() {
+ 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    dispatch(logout());
+  }
+
+  function LogoutNavigate() {
+    navigate('/');
+  }
+
   return (
-    <div>
+    <div className='fullDashbord'>
+      <div className='vartical-nav'>
       <NavBars />
-      <div className='sidenav'>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-      </Navbar>
-
       </div>
-
-      <div className='cards'> 
-      <img width={"20%"} src={income}></img>
-<img width={"20%"}src={expenses}></img>
-<img width={"30%"}src={master}></img>
-      </div>
-
       <div>
-      <img width={"60%"}src={chart}></img>
-      <img width={"25%"}src={quicktran}></img>
+        <div className='sidenav'>
+          <Navbar>
+            <Container>
+              <Navbar.Brand><img width="20px" src='https://cdn-icons-png.flaticon.com/512/3917/3917754.png' /></Navbar.Brand>
+              <Navbar.Toggle />
+              <Navbar.Collapse className="justify-content-end">
+                <div className='navirightcontnt'>
+                  
+                <img width="20px" src={flag} />
+                <img width="20px" src={npb} />
+                <img width="30px" src={userlogo} />
+                <img width="40px" src={userimg} />
+                <button onClick={()=>{ handleLogout(); LogoutNavigate();}}>Logout</button>
+                </div>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+
+        </div>
+
+        <div className='cards'>
+          <img width={"25%"} src={income}/>
+          <img width={"25%"} src={expenses}/>
+          <img width={"35%"} src={master}/>
+        </div><br/>
+
+        <div className='sheet'>
+         <img width={"70%"} src={chart}/>
+          <img width={"28%"} height={"425px"} src={quicktran}/>
+        </div> <br/>
+
+        <div className='piechart'>
+          <img width={"60%"} src={piechar}/>
+          <img width={"32%"} height={"500px"} src={contact} />
+        </div>
+
+        <div className='table-img'>
+         <News/>
+          <div className='refer-img'>
+          <img width={"320px"} height={"400px"} src={refer}/>
+          </div>
+          
+        </div>
       </div>
-
-      <div>
-      <img width={"40%"}src={piechar}></img>
-      </div>
-
-
-
     </div>
   );
 }
